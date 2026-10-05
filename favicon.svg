@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#2F4A33"/>
+  <!-- farmhouse gable -->
+  <path d="M14 33 L32 16 L50 33" fill="none" stroke="#F6F2EA" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="27" y="26" width="10" height="9" rx="1.5" fill="#D9774E"/>
+  <!-- furrowed fields -->
+  <path d="M12 42 Q32 37 52 42" fill="none" stroke="#F6F2EA" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M12 49 Q32 44 52 49" fill="none" stroke="#B9C9A8" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netherby Retreat · Country home in Niagara</title>
+<meta name="description" content="A private two-bedroom country home on Netherby Road in Welland. Farmland views, Starlink internet, and Niagara on your doorstep. Book direct.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --linen: #EEF1E8;
+    --paper: #FCFDF9;
+    --ink: #1E2620;
+    --ink-2: #47514A;
+    --ink-3: #5C665F;
+    --line: #E2DCCF;
+    --field: #2F4A33;
+    --field-2: #3E6143;
+    --sage: #DDE5D3;
+    --sage-2: #EEF2E8;
+    --clay: #B0502C;
+    --clay-2: #933F21;
+    --clay-tint: #F6E4DA;
+    --serif: 'Young Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --r: 14px;
+    --bar: 46px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--bar) + 72px); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+  body { margin: 0; background: var(--linen); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: var(--field-2); }
+  button { font: inherit; cursor: pointer; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -0.01em; margin: 0; }
+  h2 { font-size: clamp(30px, 4.2vw, 44px); }
+  h3 { font-size: 22px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--field-2); margin: 0 0 12px; }
+  .lede { font-size: 19px; color: var(--ink-2); max-width: 60ch; }
+  section { padding: 88px 0; }
+  .tbc { border-bottom: 1.5px dotted var(--clay); cursor: help; }
+  :focus-visible { outline: 3px solid var(--clay); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- concept bar (not part of the guest site) ---------- */
+  .concept { position: fixed; top: 0; left: 0; right: 0; height: var(--bar); z-index: 60; background: #121614; color: #E9EDE6;
+    display: flex; align-items: center; gap: 14px; padding: 0 14px; font-size: 13.5px; }
+  .concept .tag { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11.5px; color: #F0B49A; white-space: nowrap; }
+  .concept .tagnote { color: #A9B3AA; font-size: 13px; white-space: nowrap; }
+  .seg { display: inline-flex; background: #232a26; border-radius: 999px; padding: 3px; margin-left: auto; }
+  .seg button { border: 0; background: transparent; color: #C8D0C9; padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .seg button[aria-pressed="true"] { background: #F6F2EA; color: #121614; }
+  .dash-btn { border: 1px solid #3a443d; background: transparent; color: #E9EDE6; border-radius: 999px; padding: 6px 13px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .dash-btn:disabled { opacity: .4; cursor: not-allowed; }
+  .dash-btn[aria-pressed="true"] { background: var(--clay); border-color: var(--clay); }
+  @media (max-width: 640px) { .concept .tagnote { display: none; } .seg button { padding: 6px 12px; } .concept { gap: 8px; padding: 0 10px; } }
+  @media (max-width: 480px) { .seg .lg { display: none; } .concept .tag { font-size: 11px; letter-spacing: .06em; } .dash-btn { padding: 6px 10px; } }
+
+  /* ---------- nav ---------- */
+  .nav { position: sticky; top: var(--bar); z-index: 50; background: rgba(238,241,232,.92); backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; gap: 24px; height: 66px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .brand img { width: 34px; height: 34px; border-radius: 8px; }
+  .brand b { font-family: var(--serif); font-weight: 400; font-size: 21px; }
+  .nav nav { display: flex; gap: 22px; margin-left: auto; }
+  .nav nav a { color: var(--ink-2); text-decoration: none; font-weight: 500; font-size: 15.5px; }
+  .nav nav a:hover { color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 999px; padding: 13px 22px; font-weight: 600; font-size: 16px; text-decoration: none; transition: background .2s, transform .2s; }
+  .btn-clay { background: var(--clay); color: #fff; }
+  .btn-clay:hover { background: var(--clay-2); }
+  .btn-ghost { background: rgba(255,255,255,.14); color: #fff; border: 1px solid rgba(255,255,255,.5); }
+  .btn-ghost:hover { background: rgba(255,255,255,.24); }
+  .btn-line { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .btn-line:hover { background: var(--ink); color: var(--linen); }
+  .nav .btn { padding: 10px 18px; font-size: 15px; }
+  @media (max-width: 820px) { .nav nav { display: none; } .nav .btn { margin-left: auto; } }
+  @media (max-width: 560px) { .nav .btn { display: none; } .brand b { font-size: 19px; white-space: nowrap; } .nav .wrap { height: 58px; } }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; min-height: calc(92vh - var(--bar) - 66px); display: flex; align-items: flex-end; color: #fff; padding: 0; overflow: hidden; background: #1F2A22; }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,22,17,.62) 0%, rgba(16,22,17,.25) 55%, rgba(16,22,17,0) 80%), linear-gradient(180deg, rgba(16,22,17,.1) 0%, rgba(16,22,17,.45) 42%, rgba(16,22,17,.88) 100%); }
+  .hero .wrap { position: relative; z-index: 1; padding-top: 140px; padding-bottom: 56px; width: 100%; }
+  .hero .eyebrow { color: #E8D7C3; }
+  .hero h1 { font-size: clamp(42px, 7vw, 82px); max-width: 13ch; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
+  .hero p.sub { font-size: clamp(17px, 2vw, 21px); max-width: 46ch; color: rgba(255,255,255,.9); margin: 18px 0 28px; }
+  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; font-size: 14.5px; }
+  .facts span { white-space: nowrap; padding: 6px 12px; border-radius: 999px; background: rgba(16,22,17,.45); border: 1px solid rgba(255,255,255,.22); color: #fff; backdrop-filter: blur(6px); }
+
+  /* ---------- the house ---------- */
+  .house { display: grid; gap: 48px; align-items: center; }
+  @media (min-width: 900px) { .house { grid-template-columns: 1.05fr 1fr; } }
+  .house .stack { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .house .stack img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--r); }
+  .house .stack img:nth-child(2) { margin-top: 48px; }
+  .host { display: flex; gap: 14px; align-items: center; margin-top: 26px; padding: 16px 18px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); max-width: 480px; }
+  .host .av { width: 46px; height: 46px; border-radius: 50%; background: var(--field); color: var(--linen); display: grid; place-items: center; font-family: var(--serif); font-size: 20px; flex: none; }
+  .host p { margin: 0; font-size: 15px; color: var(--ink-2); }
+  .host b { color: var(--ink); }
+
+  /* ---------- gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 36px; }
+  @media (min-width: 760px) { .gallery { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 210px; grid-auto-flow: dense; } .gallery .big { grid-column: span 2; grid-row: span 2; } .gallery .wide { grid-column: span 2; } }
+  .gallery button { border: 0; padding: 0; background: none; border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 4/5; }
+  @media (min-width: 760px) { .gallery button { aspect-ratio: auto; } }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .gallery button:hover img { transform: scale(1.04); }
+  .gallery .more { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #1E2620; color: #fff; padding: 9px 16px; border-radius: 999px; font-weight: 600; font-size: 16px; white-space: nowrap; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+  .lb { position: fixed; inset: 0; z-index: 80; background: rgba(12,16,13,.94); display: none; align-items: center; justify-content: center; }
+  .lb.open { display: flex; }
+  .lb img { max-width: 92vw; max-height: 82vh; border-radius: 8px; }
+  .lb .cap { position: absolute; bottom: 22px; left: 0; right: 0; text-align: center; color: #D6DDD4; font-size: 15px; }
+  .lb button { position: absolute; border: 0; background: rgba(255,255,255,.12); color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 22px; }
+  .lb .x { top: 18px; right: 18px; } .lb .p { left: 18px; top: 50%; } .lb .n { right: 18px; top: 50%; }
+
+  /* ---------- sleeping ---------- */
+  .sleep { display: grid; gap: 18px; margin-top: 34px; }
+  @media (min-width: 760px) { .sleep { grid-template-columns: repeat(3, 1fr); } }
+  .sleep article { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+  .sleep img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+  .sleep div { padding: 16px 18px 18px; }
+  .sleep h3 { font-size: 20px; } .sleep p { margin: 4px 0 0; color: var(--ink-2); font-size: 15.5px; }
+
+  /* ---------- amenities ---------- */
+  .amen { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-top: 34px; }
+  @media (min-width: 700px) { .amen { grid-template-columns: repeat(3, 1fr); } }
+  .amen div { background: var(--paper); padding: 22px 22px 24px; }
+  .amen h3 { font-family: var(--sans); font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--field-2); margin-bottom: 10px; }
+  .amen ul { margin: 0; padding: 0; list-style: none; }
+  .amen li { padding: 4px 0 4px 22px; position: relative; font-size: 15.5px; color: var(--ink-2); }
+  .amen li::before { content: ""; position: absolute; left: 2px; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: var(--sage); border: 2px solid var(--field-2); }
+
+  /* ---------- around ---------- */
+  .around { display: grid; gap: 40px; align-items: start; }
+  @media (min-width: 900px) { .around { grid-template-columns: 1fr 1fr; } }
+  .places { margin: 26px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .places li { display: flex; justify-content: space-between; gap: 18px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+  .places li span:last-child { color: var(--ink-3); white-space: nowrap; }
+  .around .pics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .around .pics figure { margin: 0; }
+  .around .pics img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--r); }
+  .around figcaption { font-size: 13.5px; color: var(--ink-3); margin-top: 6px; }
+  .mapcard { margin-top: 22px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--sage-2); border: 1px solid var(--sage); border-radius: var(--r); padding: 16px 18px; }
+  .mapcard p { margin: 0; font-size: 15px; color: var(--ink-2); }
+
+  /* ---------- direct band ---------- */
+  .direct { background: var(--field); color: var(--linen); }
+  .direct .eyebrow { color: #C9D8BE; }
+  .direct h2 { color: #fff; max-width: 18ch; }
+  .direct .grid { display: grid; gap: 22px; margin-top: 34px; }
+  @media (min-width: 760px) { .direct .grid { grid-template-columns: repeat(3, 1fr); } }
+  .direct .grid div { border-top: 1px solid rgba(246,242,234,.25); padding-top: 16px; }
+  .direct .grid b { display: block; font-family: var(--serif); font-weight: 400; font-size: 21px; color: #fff; margin-bottom: 6px; }
+  .direct .grid p { margin: 0; color: #D7E0D2; font-size: 15.5px; }
+
+  /* ---------- booking ---------- */
+  .book-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; }
+  .rate-from { font-size: 15px; color: var(--ink-2); }
+  .rate-from b { font-family: var(--serif); font-weight: 400; font-size: 30px; color: var(--ink); }
+  .panel { background: var(--paper); border: 1px solid #D5DACB; border-radius: 20px; margin-top: 28px; }
+  .bookB { display: grid; }
+  @media (min-width: 980px) { .bookB { grid-template-columns: 1fr 360px; } }
+  .cal { padding: 24px; }
+  .cal-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .cal-top button { border: 1px solid var(--line); background: var(--paper); width: 40px; height: 40px; border-radius: 50%; font-size: 18px; color: var(--ink); }
+  .cal-top button:disabled { opacity: .35; cursor: default; }
+  .cal-hint { font-size: 14.5px; color: var(--ink-3); }
+  .months { display: grid; gap: 28px; }
+  @media (min-width: 700px) { .months { grid-template-columns: 1fr 1fr; } }
+  .month h4 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 6px 0 10px; text-align: center; }
+  .dow, .days { display: grid; grid-template-columns: repeat(7, 1fr); }
+  .dow span { text-align: center; font-size: 12px; font-weight: 600; color: var(--ink-3); padding: 6px 0; }
+  .day { aspect-ratio: 1; border: 0; background: none; border-radius: 10px; font-size: 15px; font-weight: 500; color: var(--ink); position: relative; }
+  .day:hover:not(:disabled) { background: var(--sage-2); }
+  .day:disabled { color: #B6B9B1; cursor: default; }
+  .day.booked { color: #5F5A52; text-decoration: line-through; text-decoration-color: #A39E93; }
+  .day.today::after { content: ""; position: absolute; left: 50%; bottom: 6px; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: var(--clay); }
+  .day.inrange { background: var(--sage); border-radius: 0; }
+  .day.sel { background: var(--field); color: #fff; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; font-size: 13.5px; color: var(--ink-3); }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 6px; vertical-align: -1px; }
+  .summary { border-top: 1px solid var(--line); padding: 24px; background: var(--sage-2); border-radius: 0 0 20px 20px; }
+  @media (min-width: 980px) { .summary { border-top: 0; border-left: 1px solid var(--line); border-radius: 0 20px 20px 0; } }
+  .summary h3 { font-size: 22px; margin-bottom: 4px; }
+  .summary .dates { font-size: 15px; color: var(--ink-2); margin-bottom: 14px; min-height: 24px; }
+  .lines { margin: 0 0 16px; padding: 0; list-style: none; font-size: 15.5px; }
+  .lines li { display: flex; justify-content: space-between; padding: 6px 0; color: var(--ink-2); }
+  .lines li.tot { border-top: 1px solid var(--sage); margin-top: 6px; padding-top: 12px; font-weight: 700; color: var(--ink); font-size: 17px; }
+  .field { display: grid; gap: 6px; margin-bottom: 14px; }
+  .field label { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+  .field input, .field select, .field textarea { font: inherit; font-size: 16px; padding: 11px 13px; border: 1px solid #CFC8B9; border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
+  .field textarea { min-height: 96px; resize: vertical; }
+  .row2 { display: grid; gap: 12px; } @media (min-width: 560px) { .row2 { grid-template-columns: 1fr 1fr; } }
+  .full { width: 100%; }
+  .note { font-size: 13.5px; color: var(--ink-3); margin: 12px 0 0; }
+  .demo { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--clay-2); background: var(--clay-tint); border-radius: 999px; padding: 3px 9px; }
+  .step { padding: 28px; max-width: 640px; }
+  .radio { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .radio label { flex: 1 1 200px; border: 1.5px solid #CFC8B9; border-radius: 12px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; font-size: 15px; cursor: pointer; background: #fff; }
+  .radio label:has(input:checked) { border-color: var(--field); background: var(--sage-2); }
+  .radio small { display: block; color: var(--ink-3); }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: var(--ink-2); margin: 6px 0 18px; }
+  .done { text-align: center; padding: 48px 28px; }
+  .done .tick { width: 64px; height: 64px; border-radius: 50%; background: var(--field); color: #fff; display: grid; place-items: center; margin: 0 auto 18px; font-size: 30px; }
+  .done h3 { font-size: 30px; }
+  .done p { color: var(--ink-2); max-width: 46ch; margin: 10px auto 0; }
+  .done .ref { font-family: ui-monospace, Menlo, monospace; background: var(--sage-2); border-radius: 8px; padding: 2px 8px; }
+  .bookA { display: grid; }
+  @media (min-width: 900px) { .bookA { grid-template-columns: 1fr 340px; } }
+  .bookA form { padding: 28px; }
+  .bookA aside { padding: 28px; background: var(--sage-2); border-top: 1px solid var(--line); border-radius: 0 0 20px 20px; font-size: 15.5px; color: var(--ink-2); }
+  @media (min-width: 900px) { .bookA aside { border-top: 0; border-left: 1px solid var(--line); border-radius: 0 20px 20px 0; } }
+  .bookA aside ol { padding-left: 20px; margin: 10px 0 0; } .bookA aside li { margin-bottom: 8px; }
+  .rates { margin: 14px 0 0; padding: 0; list-style: none; }
+  .rates li { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--sage); }
+
+  /* ---------- rules + faq ---------- */
+  .rf { display: grid; gap: 48px; }
+  @media (min-width: 900px) { .rf { grid-template-columns: 1fr 1.3fr; } }
+  .rules { margin: 22px 0 0; padding: 0; list-style: none; }
+  .rules li { padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 16px; color: var(--ink-2); }
+  .rules li b { color: var(--ink); font-weight: 600; }
+  details { border-bottom: 1px solid var(--line); }
+  details summary { list-style: none; cursor: pointer; padding: 18px 34px 18px 0; position: relative; font-weight: 600; font-size: 17px; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; position: absolute; right: 4px; top: 14px; font-size: 24px; font-weight: 400; color: var(--field-2); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 18px; color: var(--ink-2); font-size: 16px; }
+
+  /* ---------- footer ---------- */
+  footer { background: #1A211C; color: #BFC8BE; padding: 56px 0 120px; font-size: 15px; }
+  footer .wrap { display: grid; gap: 28px; }
+  @media (min-width: 800px) { footer .wrap { grid-template-columns: 1.2fr 1fr 1fr; } }
+  footer b { color: #fff; font-family: var(--serif); font-weight: 400; font-size: 22px; display: block; margin-bottom: 8px; }
+  footer h3 { font-family: var(--sans); font-weight: 700; margin: 0 0 8px; color: #fff; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+  footer p { margin: 0 0 6px; }
+  footer a { color: #DCE6D6; }
+  footer .fine { grid-column: 1 / -1; border-top: 1px solid #2C3530; padding-top: 18px; font-size: 13.5px; color: #8E988F; }
+
+  /* ---------- sticky mobile bar ---------- */
+  .mbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--paper); border-top: 1px solid var(--line); box-shadow: 0 -10px 30px -18px rgba(30,38,32,.4); }
+  .mbar span { font-size: 14.5px; color: var(--ink-2); } .mbar b { font-family: var(--serif); font-weight: 400; font-size: 21px; color: var(--ink); }
+  @media (max-width: 820px) { .mbar { display: flex; } }
+  body.dash-open .mbar { display: none; }
+
+  /* ---------- owner dashboard (Option B) ---------- */
+  #dash { display: none; min-height: 100vh; padding-top: var(--bar); }
+  body.dash-open { background: #E9ECE4; }
+  body.dash-open #site { display: none; }
+  body.dash-open #dash { display: block; }
+  .d-top { background: #fff; border-bottom: 1px solid #DCE0D6; }
+  .d-top .wrap { display: flex; align-items: center; gap: 14px; height: 66px; }
+  .d-top .who { margin-left: auto; font-size: 14px; color: var(--ink-3); }
+  @media (max-width: 700px) { .d-top .who { display: none; } .d-top .wrap { flex-wrap: wrap; height: auto; padding-top: 12px; padding-bottom: 12px; gap: 10px; } .d-top .brand b { white-space: nowrap; } }
+  .sync { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--field-2); background: var(--sage-2); border: 1px solid var(--sage); border-radius: 999px; padding: 5px 12px; }
+  .sync i { width: 8px; height: 8px; border-radius: 50%; background: #3F9B54; }
+  .d-body { padding: 28px 0 80px; }
+  .stats { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 860px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat { background: #fff; border: 1px solid #DCE0D6; border-radius: var(--r); padding: 16px 18px; }
+  .stat span { font-size: 13px; color: var(--ink-3); font-weight: 600; letter-spacing: .04em; }
+  .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: 30px; margin-top: 4px; }
+  .d-grid { display: grid; gap: 18px; margin-top: 18px; }
+  @media (min-width: 980px) { .d-grid { grid-template-columns: 1.35fr 1fr; } }
+  .card { background: #fff; border: 1px solid #DCE0D6; border-radius: 16px; padding: 20px; }
+  .card h3 { font-family: var(--sans); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .card .sub { font-size: 14px; color: var(--ink-3); margin: 0 0 14px; }
+  .ocal .day { aspect-ratio: auto; height: 56px; border-radius: 8px; font-size: 14px; display: flex; align-items: flex-start; justify-content: flex-start; padding: 6px 8px; border: 1px solid transparent; }
+  .ocal .days { gap: 4px; }
+  .ocal .day.k-airbnb { background: #FBE3DD; color: #8C3524; text-decoration: none; }
+  .ocal .day.k-direct { background: #DDE9D8; color: #2B5233; text-decoration: none; }
+  .ocal .day.k-owner { background: #ECE7DC; border: 1px dashed #A99F8A; color: #5E5847; text-decoration: none; }
+  .ocal .day.free:hover { border-color: var(--field-2); background: #fff; }
+  .ocal .day small { position: absolute; left: 8px; bottom: 5px; font-size: 10.5px; font-weight: 600; opacity: .85; }
+  .blist { margin: 0; padding: 0; list-style: none; }
+  .blist li { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid #ECEEE8; font-size: 15px; }
+  .blist li:last-child { border-bottom: 0; }
+  .src { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; }
+  .src.airbnb { background: #FBE3DD; color: #8C3524; } .src.direct { background: #DDE9D8; color: #2B5233; } .src.owner { background: #ECE7DC; color: #5E5847; }
+  .blist small { display: block; color: var(--ink-3); font-size: 13.5px; }
+  .pr .field input { padding: 9px 12px; }
+  .pr .row2 { grid-template-columns: 1fr 1fr; }
+  .toast { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%) translateY(20px); background: #1A211C; color: #fff; padding: 12px 18px; border-radius: 12px; font-size: 15px; opacity: 0; transition: opacity .25s, transform .25s; z-index: 90; pointer-events: none; max-width: 90vw; }
+  .toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- Concept controls: for the pitch only, never part of the live guest site -->
+<div class="concept" role="region" aria-label="Concept preview controls">
+  <span class="tag">Concept preview</span><span class="tagnote">Not live. Bookings are simulated.</span>
+  <div class="seg" role="group" aria-label="Booking option">
+    <button type="button" data-mode="A" aria-pressed="false">A<span class="lg"> · Request</span></button>
+    <button type="button" data-mode="B" aria-pressed="true">B<span class="lg"> · Book online</span></button>
+  </div>
+  <button type="button" class="dash-btn" id="dashBtn" aria-pressed="false" aria-label="Owner dashboard">Owner dashboard</button>
+</div>
+<div style="height: var(--bar)"></div>
+
+<div id="site">
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Netherby Retreat home"><img src="favicon.svg" alt=""><b>Netherby Retreat</b></a>
+      <nav aria-label="Sections">
+        <a href="#house">The house</a><a href="#photos">Photos</a><a href="#around">Around you</a><a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-clay" href="#book">Check dates</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img src="assets/img/house-front.jpg" alt="The front of the house on Netherby Road, with a deck and garden on a sunny day">
+      <div class="wrap">
+        <h1>Niagara's quiet side, all to yourself.</h1>
+        <p class="sub">A private country home on Netherby Road, among the farm fields of Welland, with the Falls, the wineries and Lake Erie a short drive away.</p>
+        <div class="ctas">
+          <a class="btn btn-clay" href="#book">Check dates</a>
+          <a class="btn btn-ghost" href="#photos">See the house</a>
+        </div>
+        <div class="facts" aria-label="At a glance">
+          <span>4 guests</span><span>2 bedrooms</span><span>3 beds</span><span>1 bath</span><span>Starlink Wi-Fi</span><span>Free parking</span><span>Self check-in</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="house">
+      <div class="wrap house">
+        <div>
+          <p class="eyebrow">The house</p>
+          <h2>Your base for everything Niagara.</h2>
+          <p class="lede">Set among open farmland, this two-bedroom country home is yours alone. Spend the day at the Falls, the wineries or the beaches, then come back to a garden view, a big sky and real quiet.</p>
+          <p style="color:var(--ink-2)">Inside there's a king bedroom on the main floor, a twin room upstairs, and a full kitchen with a gas stove and double oven. The laundry room means you can pack light. Starlink high-speed internet makes a working week here easy, and stays of 28 nights or more are welcome.</p>
+          <div class="host">
+            <div class="av" aria-hidden="true">H</div>
+            <p><b>Hosted by Harminder.</b> You deal with the owner directly, not a call centre. Message any time before or during your stay.</p>
+          </div>
+        </div>
+        <div class="stack">
+          <img src="assets/img/living.jpg" alt="Living room with sofas, coffee table and dining table">
+          <img src="assets/img/kitchen-stove.jpg" alt="Kitchen with stainless gas range and white cabinets">
+        </div>
+      </div>
+    </section>
+
+    <section id="photos" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow">Photos</p>
+        <h2>Take a look around.</h2>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow">Where you'll sleep</p>
+        <h2>Room for four.</h2>
+        <div class="sleep">
+          <article><img src="assets/img/bedroom-king.jpg" alt="Main floor bedroom with a king bed"><div><h3>Bedroom 1</h3><p>King bed, on the main floor next to the living room. Blackout curtains.</p></div></article>
+          <article><img src="assets/img/bedroom-twin.jpg" alt="Upstairs bedroom with two single beds pushed together"><div><h3>Bedroom 2</h3><p>Two singles upstairs. Keep them apart, or push them together into one.</p></div></article>
+          <article><img src="assets/img/living-dining.jpg" alt="Open living and dining room"><div><h3>Living room</h3><p>Two sofas, a TV and a dining table that doubles as a desk.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow">What's here</p>
+        <h2>Everything you need, nothing you don't.</h2>
+        <div class="amen">
+          <div><h3>Sleep</h3><ul><li>King bed and two singles</li><li>Cotton linens</li><li>Extra pillows and blankets</li><li>Room-darkening shades</li></ul></div>
+          <div><h3>Cook</h3><ul><li>Gas stove and double oven</li><li>Samsung fridge, microwave</li><li>Keurig, kettle and coffee</li><li>Pots, pans and the basics</li></ul></div>
+          <div><h3>Work</h3><ul><li>Starlink high-speed internet</li><li>Dining table as a desk</li><li>Long stays welcome (28+ nights)</li></ul></div>
+          <div><h3>Comfort</h3><ul><li>Central heat and A/C</li><li>Smart thermostat, ceiling fan</li><li>Bathtub and shower</li><li>TV and books</li></ul></div>
+          <div><h3>Live easy</h3><ul><li>Washer and dryer</li><li>Detergent and dryer sheets</li><li>Towels and toiletries</li><li>Hangers and storage</li></ul></div>
+          <div><h3>Outside</h3><ul><li>Private entrance</li><li>Private backyard</li><li>Garden view</li><li>Free parking on the drive</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="around" style="padding-top:0">
+      <div class="wrap around">
+        <div>
+          <p class="eyebrow">Around you</p>
+          <h2>Country quiet, with pizza up the road.</h2>
+          <p class="lede">Netherby Variety is just up the road for essentials, snacks and an LCBO outlet. On the same corner, The Brick Oven Pizza Company bakes wood-fired pies the locals line up for on weekends.</p>
+          <ul class="places">
+            <li><span>Niagara Falls</span><span>A short drive</span></li>
+            <li><span>Niagara-on-the-Lake wineries</span><span>A short drive</span></li>
+            <li><span>Lake Erie beaches</span><span>A short drive</span></li>
+            <li><span>Golf courses and trails</span><span>Nearby</span></li>
+            <li><span>New regional hospital</span><span>About 10 minutes</span></li>
+          </ul>
+          <div class="mapcard">
+            <p><b>Netherby Road, Welland, Ontario</b><br>The exact address is sent with your booking.</p>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Netherby+Rd+Welland+ON" target="_blank" rel="noopener">Open in Maps</a>
+          </div>
+        </div>
+        <div class="pics">
+          <figure><img src="assets/img/netherby-variety.jpg" alt="Netherby Variety store sign at the corner"><figcaption>Netherby Variety, up the road</figcaption></figure>
+          <figure><img src="assets/img/backyard.jpg" alt="The private backyard with mature trees"><figcaption>Your backyard</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="direct">
+      <div class="wrap">
+        <p class="eyebrow">Why book direct</p>
+        <h2>Same house. Better rate. Straight to the owner.</h2>
+        <div class="grid">
+          <div><b>The best price</b><p>No booking site takes a cut here, so the same dates cost less than anywhere else.</p></div>
+          <div><b>A real person</b><p>Questions go straight to Harminder, not a help centre.</p></div>
+          <div><b>Longer stays, better rates</b><p>Staying a week or a month? Ask, and you'll get a rate to match.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="wrap">
+        <div class="book-head">
+          <div>
+            <p class="eyebrow">Book your stay</p>
+            <h2 id="bookTitle">Pick your dates.</h2>
+          </div>
+          <p class="rate-from">From <b id="fromRate">$195</b> / night <span class="demo">Sample rates</span></p>
+        </div>
+
+        <!-- Option B: built-in calendar booking -->
+        <div id="modeB">
+          <div class="panel" id="bStep1">
+            <div class="bookB">
+              <div class="cal">
+                <div class="cal-top">
+                  <button type="button" id="calPrev" aria-label="Previous month">‹</button>
+                  <span class="cal-hint" id="calHint">Select your check-in date</span>
+                  <button type="button" id="calNext" aria-label="Next month">›</button>
+                </div>
+                <div class="months" id="months"></div>
+                <div class="legend"><span><i style="background:var(--field)"></i>Your dates</span><span><i style="background:#EAE6DD"></i>Booked</span><span>2-night minimum</span></div>
+              </div>
+              <div class="summary">
+                <h3>Your stay</h3>
+                <div class="dates" id="sumDates">Choose dates to see the price.</div>
+                <ul class="lines" id="sumLines"></ul>
+                <div class="field"><label for="bGuests">Guests</label>
+                  <select id="bGuests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option></select></div>
+                <button type="button" class="btn btn-clay full" id="reserveBtn" disabled>Reserve</button>
+                <p class="note">You won't be charged until you confirm on the next step.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="bStep2" hidden>
+            <form class="step" id="bForm">
+              <p class="eyebrow" style="margin-bottom:6px">Step 2 of 2</p>
+              <h3 style="font-size:26px">Your details</h3>
+              <p class="dates" id="step2Dates" style="color:var(--ink-2)"></p>
+              <div class="row2">
+                <div class="field"><label for="bName">Full name</label><input id="bName" required autocomplete="name" value="Sam Taylor"></div>
+                <div class="field"><label for="bPhone">Phone</label><input id="bPhone" type="tel" autocomplete="tel" value="(905) 555-0142"></div>
+              </div>
+              <div class="field"><label for="bEmail">Email</label><input id="bEmail" type="email" required autocomplete="email" value="sam@example.com"></div>
+              <p style="font-weight:600;font-size:14px;color:var(--ink-2);margin:4px 0 8px">How would you like to pay?</p>
+              <div class="radio">
+                <label><input type="radio" name="pay" value="card" checked><span>Card<small>Pay securely now. Confirmed instantly.</small></span></label>
+                <label><input type="radio" name="pay" value="etransfer"><span>Interac e-Transfer<small>Dates held 24 hours until it arrives.</small></span></label>
+              </div>
+              <label class="check"><input type="checkbox" required checked> <span>I agree to the house rules and rental agreement: no pets, no parties, no smoking, quiet hours 10 pm to 8 am.</span></label>
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <button type="button" class="btn btn-line" id="backBtn">Back</button>
+                <button type="submit" class="btn btn-clay" id="confirmBtn">Confirm booking</button>
+              </div>
+              <p class="note"><span class="demo">Demo</span> No payment is taken and nothing is sent. The details are pre-filled sample data.</p>
+            </form>
+          </div>
+
+          <div class="panel" id="bStep3" hidden>
+            <div class="done">
+              <div class="tick" aria-hidden="true">✓</div>
+              <h3>You're booked.</h3>
+              <p id="doneText"></p>
+              <p style="margin-top:18px"><button type="button" class="btn btn-line" id="againBtn">Book another stay</button></p>
+              <p class="note">Now open the <b>Owner dashboard</b> in the bar at the top. The booking is already there, and the dates are closed on the calendar.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option A: request to book by email -->
+        <div id="modeA" hidden>
+          <div class="panel">
+            <div class="bookA">
+              <form id="aForm">
+                <div class="row2">
+                  <div class="field"><label for="aIn">Check-in</label><input id="aIn" type="date" required></div>
+                  <div class="field"><label for="aOut">Checkout</label><input id="aOut" type="date" required></div>
+                </div>
+                <div class="row2">
+                  <div class="field"><label for="aGuests">Guests</label><select id="aGuests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+                  <div class="field"><label for="aPhone">Phone</label><input id="aPhone" type="tel" value="(905) 555-0142"></div>
+                </div>
+                <div class="row2">
+                  <div class="field"><label for="aName">Name</label><input id="aName" required value="Sam Taylor"></div>
+                  <div class="field"><label for="aEmail">Email</label><input id="aEmail" type="email" required value="sam@example.com"></div>
+                </div>
+                <div class="field"><label for="aMsg">Anything we should know?</label><textarea id="aMsg">We're visiting for a wedding in Niagara-on-the-Lake. Is early check-in possible?</textarea></div>
+                <button type="submit" class="btn btn-clay">Send request</button>
+                <p class="note"><span class="demo">Demo</span> Nothing is sent. On the live site, this goes straight to Harminder's email.</p>
+              </form>
+              <aside>
+                <h3 style="font-size:21px;color:var(--ink)">How booking works</h3>
+                <ol>
+                  <li>Send your dates.</li>
+                  <li>Harminder confirms by email.</li>
+                  <li>Pay by Interac e-Transfer to lock in your stay.</li>
+                  <li>Check-in details arrive before you do.</li>
+                </ol>
+                <ul class="rates" aria-label="Rates">
+                  <li><span>Sunday to Thursday</span><b id="aWk">$195</b></li>
+                  <li><span>Friday and Saturday</span><b id="aWe">$245</b></li>
+                  <li><span>Cleaning, per stay</span><b id="aCl">$95</b></li>
+                </ul>
+                <p class="note">Plus 13% HST. Two-night minimum.</p>
+              </aside>
+            </div>
+          </div>
+          <div class="panel" id="aDone" hidden>
+            <div class="done">
+              <div class="tick" aria-hidden="true">✓</div>
+              <h3>Request sent.</h3>
+              <p id="aDoneText"></p>
+              <p style="margin-top:18px"><button type="button" class="btn btn-line" id="aAgain">Send another</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="padding-top:0">
+      <div class="wrap rf">
+        <div>
+          <p class="eyebrow">House rules</p>
+          <h2>Simple, and fair.</h2>
+          <ul class="rules">
+            <li><b>Up to 4 guests.</b> No parties or events.</li>
+            <li><b>No pets</b>, and no smoking.</li>
+            <li><b>Quiet hours</b> from 10 pm to 8 am.</li>
+            <li><b>Park</b> on the gravel drive to the right of the main entrance only.</li>
+            <li><b>Out back,</b> the water-tank lids sit flush with the ground. Watch your step, and leave them closed.</li>
+            <li><b>Before you go:</b> gather used towels, take out the trash, switch things off, lock up.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow">Questions</p>
+          <h2>Good to know.</h2>
+          <div style="margin-top:14px">
+            <details><summary>How does check-in work?</summary><p>It's self check-in with a smart lock. Your door code arrives before your stay. Check-in is from <span class="tbc" title="To confirm with Harminder">4:00 pm</span> and checkout is by <span class="tbc" title="To confirm with Harminder">11:00 am</span>.</p></details>
+            <details><summary>Where do I park?</summary><p>Parking is free, on the gravel drive to the right of the main entrance. Please keep vehicles off the back of the property.</p></details>
+            <details><summary>What's the cancellation policy?</summary><p><span class="tbc" title="To confirm with Harminder">Full refund up to 7 days before check-in. 50% up to 48 hours before. No refund after that.</span></p></details>
+            <details><summary>Is the internet good enough to work?</summary><p>Yes. The house runs on Starlink high-speed internet, and plenty of guests work from here.</p></details>
+            <details><summary>Do you take longer stays?</summary><p>Yes. Stays of 28 nights or more are welcome, so ask about a monthly rate.</p></details>
+            <details><summary>Are there cameras?</summary><p>There are exterior cameras at the front door and around the outside of the property. None face into the home, and there are none inside.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><b>Netherby Retreat</b><p>A country home on Netherby Road, Welland, in the Niagara Region.</p></div>
+      <div><h3>Contact</h3><p>Email and phone <span class="tbc" title="To confirm with Harminder">to come</span></p><p><a href="#book">Check dates</a></p></div>
+      <div><h3>Licence</h3><p>Welland short-term rental licence STR-000461</p></div>
+      <p class="fine">Concept preview prepared for Harminder Paink. Not live. Photos are from the current listing. Rates shown are samples.</p>
+    </div>
+  </footer>
+
+  <div class="mbar"><span>From <b id="mRate">$195</b> / night</span><a class="btn btn-clay" href="#book">Check dates</a></div>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <img id="lbImg" src="assets/img/house-front.jpg" alt="The house from the road">
+    <div class="cap" id="lbCap"></div>
+    <button type="button" class="x" id="lbX" aria-label="Close">✕</button>
+    <button type="button" class="p" id="lbP" aria-label="Previous photo">‹</button>
+    <button type="button" class="n" id="lbN" aria-label="Next photo">›</button>
+  </div>
+</div>
+
+<!-- Owner dashboard (Option B) -->
+<div id="dash" aria-label="Owner dashboard">
+  <div class="d-top"><div class="wrap">
+    <a class="brand" href="#" id="dashHome"><img src="favicon.svg" alt=""><b>Netherby Retreat</b></a>
+    <span class="sync"><i></i>Airbnb calendar linked · checked 4 min ago</span>
+    <span class="who">Signed in as Harminder</span>
+  </div></div>
+  <div class="d-body"><div class="wrap">
+    <p class="eyebrow">Owner dashboard <span class="demo" style="margin-left:6px">Sample data</span></p>
+    <div class="stats">
+      <div class="stat"><span>Upcoming stays</span><b id="sUp">0</b></div>
+      <div class="stat"><span>Nights booked, next 30 days</span><b id="sNights">0</b></div>
+      <div class="stat"><span>Direct revenue, next 30 days</span><b id="sRev">$0</b></div>
+      <div class="stat"><span>Saved vs Airbnb's cut (~15%)</span><b id="sSaved">$0</b></div>
+    </div>
+    <div class="d-grid">
+      <div class="card ocal">
+        <div class="cal-top"><button type="button" id="oPrev" aria-label="Previous month">‹</button><h3 id="oTitle" style="margin:0"></h3><button type="button" id="oNext" aria-label="Next month">›</button></div>
+        <p class="sub">Tap a free night to block it for yourself. Tap a blocked night to open it again. Guests see the change straight away.</p>
+        <div class="dow"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <div class="days" id="oDays"></div>
+        <div class="legend"><span><i style="background:#DDE9D8"></i>Direct booking</span><span><i style="background:#FBE3DD"></i>Airbnb booking</span><span><i style="background:#E5DFD2"></i>Blocked by you</span></div>
+      </div>
+      <div style="display:grid;gap:18px;align-content:start">
+        <div class="card">
+          <h3>Upcoming bookings</h3>
+          <ul class="blist" id="bList"></ul>
+        </div>
+        <div class="card pr">
+          <h3>Prices</h3>
+          <p class="sub">Changes show on your site straight away.</p>
+          <div class="row2">
+            <div class="field"><label for="pWk">Sun–Thu, per night</label><input id="pWk" type="number" min="50" step="5"></div>
+            <div class="field"><label for="pWe">Fri–Sat, per night</label><input id="pWe" type="number" min="50" step="5"></div>
+            <div class="field"><label for="pCl">Cleaning fee</label><input id="pCl" type="number" min="0" step="5"></div>
+            <div class="field"><label for="pMin">Minimum nights</label><input id="pMin" type="number" min="1" max="7" step="1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+  /* ---------- helpers ---------- */
+  var $ = function (id) { return document.getElementById(id); };
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function d0(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function add(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function key(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function nice(d) { return d.toLocaleDateString('en-CA', { weekday: 'short', month: 'short', day: 'numeric' }); }
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-CA'); }
+  function money2(n) { return '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  var TODAY = d0(new Date());
+  function toast(msg) { var t = $('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove('on'); }, 2600); }
+
+  /* ---------- demo state (resets on reload) ---------- */
+  var S = {
+    mode: 'B',
+    rates: { wk: 195, we: 245, clean: 95, min: 2 },
+    // sample stays placed relative to today so the demo always has something to show
+    bookings: [
+      { id: 'A-1', src: 'airbnb', name: 'Airbnb guest', start: add(TODAY, 3), end: add(TODAY, 6), guests: 2 },
+      { id: 'D-1', src: 'direct', name: 'Priya S.', start: add(TODAY, 10), end: add(TODAY, 13), guests: 3 },
+      { id: 'O-1', src: 'owner', name: 'Family visit', start: add(TODAY, 18), end: add(TODAY, 21) },
+      { id: 'A-2', src: 'airbnb', name: 'Airbnb guest', start: add(TODAY, 30), end: add(TODAY, 33), guests: 4 },
+      { id: 'D-2', src: 'direct', name: 'Marc L.', start: add(TODAY, 38), end: add(TODAY, 42), guests: 2 }
+    ],
+    sel: { in: null, out: null },
+    view: new Date(TODAY.getFullYear(), TODAY.getMonth(), 1),
+    oview: new Date(TODAY.getFullYear(), TODAY.getMonth(), 1),
+    seq: 100
+  };
+  function bookingOn(d) { var k = key(d); for (var i = 0; i < S.bookings.length; i++) { var b = S.bookings[i]; if (k >= key(b.start) && k < key(b.end)) return b; } return null; }
+  function isWeekend(d) { var w = d.getDay(); return w === 5 || w === 6; }
+  function nightRate(d) { return isWeekend(d) ? S.rates.we : S.rates.wk; }
+  function rangeFree(a, b) { for (var d = new Date(a); d < b; d = add(d, 1)) if (bookingOn(d)) return false; return true; }
+  function nightsBetween(a, b) { return Math.round((b - a) / 864e5); }
+
+  /* ---------- mode + view switching ---------- */
+  function setMode(m) {
+    S.mode = m;
+    document.querySelectorAll('.seg button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === m)); });
+    $('modeA').hidden = m !== 'A'; $('modeB').hidden = m !== 'B';
+    $('bookTitle').textContent = m === 'A' ? 'Request your dates.' : 'Pick your dates.';
+    $('dashBtn').disabled = m !== 'B';
+    $('dashBtn').title = m === 'B' ? '' : 'The owner dashboard comes with Option B';
+    if (m !== 'B') setDash(false);
+  }
+  function setDash(on) {
+    document.body.classList.toggle('dash-open', on);
+    $('dashBtn').setAttribute('aria-pressed', String(on));
+    $('dashBtn').textContent = on ? (innerWidth < 480 ? '← Site' : '← Back to guest site') : (innerWidth < 480 ? 'Owner' : 'Owner dashboard');
+    if (on) { renderDash(); scrollTo(0, 0); }
+    else { renderCal(); }
+  }
+  document.querySelectorAll('.seg button').forEach(function (b) { b.addEventListener('click', function () { setMode(b.dataset.mode); }); });
+  $('dashBtn').addEventListener('click', function () { setDash(!document.body.classList.contains('dash-open')); });
+  $('dashHome').addEventListener('click', function (e) { e.preventDefault(); setDash(false); });
+
+  /* ---------- gallery + lightbox ---------- */
+  var PHOTOS = [
+    ['house-front', 'The house from the road', 'big'], ['living', 'Living room'], ['kitchen-stove', 'Kitchen'],
+    ['bedroom-king', 'Bedroom 1, king bed'], ['sunroom', 'The sunny front room', 'wide'], ['backyard', 'Private backyard'],
+    ['bedroom-twin', 'Bedroom 2, two singles'], ['bathroom', 'Bathroom'], ['kitchen', 'Kitchen counter and coffee'],
+    ['living-dining', 'Living and dining'], ['shower', 'Tub and shower'], ['laundry', 'Laundry room'],
+    ['entry', 'Front entry'], ['lawn', 'The yard'], ['fields', 'Farmland next door'], ['kitchen-fridge', 'Kitchen and fridge'],
+    ['bedroom-twin-2', 'Bedroom 2'], ['netherby-variety', 'Netherby Variety, up the road']
+  ];
+  var SHOW = 8, gi = 0;
+  var g = $('gallery');
+  PHOTOS.slice(0, SHOW).forEach(function (p, i) {
+    var b = document.createElement('button'); b.type = 'button'; if (p[2]) b.className = p[2];
+    b.setAttribute('aria-label', 'Open photo: ' + p[1]);
+    b.innerHTML = '<img loading="lazy" src="assets/img/' + p[0] + '.jpg" alt="' + p[1] + '">' + (i === SHOW - 1 ? '<span class="more">+' + (PHOTOS.length - SHOW + 1) + ' photos</span>' : '');
+    b.addEventListener('click', function () { openLb(i); });
+    g.appendChild(b);
+  });
+  function openLb(i) { gi = (i + PHOTOS.length) % PHOTOS.length; $('lbImg').src = 'assets/img/' + PHOTOS[gi][0] + '.jpg'; $('lbImg').alt = PHOTOS[gi][1]; $('lbCap').textContent = PHOTOS[gi][1] + '  ·  ' + (gi + 1) + ' / ' + PHOTOS.length; $('lb').classList.add('open'); $('lbX').focus(); }
+  function closeLb() { $('lb').classList.remove('open'); }
+  $('lbX').addEventListener('click', closeLb); $('lbP').addEventListener('click', function () { openLb(gi - 1); }); $('lbN').addEventListener('click', function () { openLb(gi + 1); });
+  $('lb').addEventListener('click', function (e) { if (e.target === $('lb')) closeLb(); });
+  document.addEventListener('keydown', function (e) {
+    if (!$('lb').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowLeft') openLb(gi - 1); if (e.key === 'ArrowRight') openLb(gi + 1);
+  });
+
+  /* ---------- Option B: guest calendar ---------- */
+  function monthGrid(first, cellFn) {
+    var wrap = document.createElement('div'); wrap.className = 'days';
+    for (var i = 0; i < first.getDay(); i++) wrap.appendChild(document.createElement('span'));
+    var last = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+    for (var dd = 1; dd <= last; dd++) wrap.appendChild(cellFn(new Date(first.getFullYear(), first.getMonth(), dd)));
+    return wrap;
+  }
+  function renderCal() {
+    var box = $('months'); box.innerHTML = '';
+    [0, 1].forEach(function (off) {
+      var first = new Date(S.view.getFullYear(), S.view.getMonth() + off, 1);
+      var m = document.createElement('div'); m.className = 'month';
+      m.innerHTML = '<h4>' + MONTHS[first.getMonth()] + ' ' + first.getFullYear() + '</h4><div class="dow"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>';
+      m.appendChild(monthGrid(first, function (d) {
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'day'; b.textContent = d.getDate();
+        var past = d < TODAY, taken = !!bookingOn(d);
+        // a booked night can still be a checkout day for the stay before it
+        var canCheckout = S.sel.in && !S.sel.out && d > S.sel.in && rangeFree(S.sel.in, d);
+        if (past) b.disabled = true;
+        else if (taken && !canCheckout) { b.disabled = true; b.classList.add('booked'); }
+        if (key(d) === key(TODAY)) b.classList.add('today');
+        if (S.sel.in && key(d) === key(S.sel.in)) b.classList.add('sel');
+        if (S.sel.out && key(d) === key(S.sel.out)) b.classList.add('sel');
+        if (S.sel.in && S.sel.out && d > S.sel.in && d < S.sel.out) b.classList.add('inrange');
+        b.setAttribute('aria-label', nice(d) + (taken ? ', booked' : ''));
+        b.addEventListener('click', function () { pick(d); });
+        return b;
+      }));
+      box.appendChild(m);
+    });
+    $('calPrev').disabled = S.view <= new Date(TODAY.getFullYear(), TODAY.getMonth(), 1);
+    renderSummary();
+  }
+  function pick(d) {
+    var s = S.sel;
+    if (!s.in || s.out || d <= s.in) { if (bookingOn(d)) return; s.in = d; s.out = null; }
+    else {
+      if (!rangeFree(s.in, d)) { toast('Those dates run into a booked night. Try a shorter stay.'); return; }
+      if (nightsBetween(s.in, d) < S.rates.min) { toast('There’s a ' + S.rates.min + '-night minimum.'); return; }
+      s.out = d;
+    }
+    renderCal();
+  }
+  function quote(a, b) {
+    var lines = {}, sub = 0;
+    for (var d = new Date(a); d < b; d = add(d, 1)) { var r = nightRate(d); sub += r; var lbl = isWeekend(d) ? 'Fri–Sat' : 'Sun–Thu'; lines[lbl] = lines[lbl] || { n: 0, r: r }; lines[lbl].n++; }
+    var pre = sub + S.rates.clean, hst = pre * 0.13;
+    return { lines: lines, sub: sub, clean: S.rates.clean, hst: hst, total: pre + hst, nights: nightsBetween(a, b) };
+  }
+  function renderSummary() {
+    var s = S.sel, L = $('sumLines');
+    $('calHint').textContent = !s.in ? 'Select your check-in date' : !s.out ? 'Now select your checkout date' : nightsBetween(s.in, s.out) + ' nights selected';
+    if (!(s.in && s.out)) { $('sumDates').textContent = s.in ? 'Check-in ' + nice(s.in) + '. Pick a checkout date.' : 'Choose dates to see the price.'; L.innerHTML = ''; $('reserveBtn').disabled = true; return; }
+    var q = quote(s.in, s.out);
+    $('sumDates').textContent = nice(s.in) + ' → ' + nice(s.out) + ' · ' + q.nights + ' nights';
+    var h = '';
+    Object.keys(q.lines).forEach(function (k) { var x = q.lines[k]; h += '<li><span>' + money(x.r) + ' × ' + x.n + ' ' + k + ' night' + (x.n > 1 ? 's' : '') + '</span><span>' + money(x.r * x.n) + '</span></li>'; });
+    h += '<li><span>Cleaning</span><span>' + money(q.clean) + '</span></li><li><span>HST (13%)</span><span>' + money2(q.hst) + '</span></li><li class="tot"><span>Total</span><span>' + money2(q.total) + '</span></li>';
+    L.innerHTML = h; $('reserveBtn').disabled = false;
+  }
+  $('calPrev').addEventListener('click', function () { S.view = new Date(S.view.getFullYear(), S.view.getMonth() - 1, 1); renderCal(); });
+  $('calNext').addEventListener('click', function () { S.view = new Date(S.view.getFullYear(), S.view.getMonth() + 1, 1); renderCal(); });
+
+  function showStep(n) { ['bStep1', 'bStep2', 'bStep3'].forEach(function (id, i) { $(id).hidden = i !== n - 1; }); $('book').scrollIntoView({ block: 'start' }); }
+  $('reserveBtn').addEventListener('click', function () {
+    var q = quote(S.sel.in, S.sel.out);
+    $('step2Dates').textContent = nice(S.sel.in) + ' → ' + nice(S.sel.out) + ' · ' + $('bGuests').value + ' · total ' + money2(q.total) + ' incl. HST';
+    showStep(2);
+  });
+  $('backBtn').addEventListener('click', function () { showStep(1); });
+  $('bForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!rangeFree(S.sel.in, S.sel.out)) { toast('Those dates were just taken. Please pick again.'); S.sel = { in: null, out: null }; showStep(1); renderCal(); return; }
+    var pay = document.querySelector('input[name=pay]:checked').value;
+    var ref = 'NR-' + (++S.seq) + String(Math.floor(Math.random() * 90 + 10));
+    var name = $('bName').value.trim() || 'Guest';
+    S.bookings.push({ id: ref, src: 'direct', name: name.split(' ')[0] + (name.split(' ')[1] ? ' ' + name.split(' ')[1][0] + '.' : ''), start: S.sel.in, end: S.sel.out, guests: parseInt($('bGuests').value, 10), total: quote(S.sel.in, S.sel.out).total, pending: pay === 'etransfer' });
+    $('doneText').innerHTML = 'Booking <span class="ref">' + ref + '</span> · ' + nice(S.sel.in) + ' to ' + nice(S.sel.out) + '. ' +
+      (pay === 'card' ? 'Your confirmation is on its way to ' : 'Your dates are held for 24 hours. e-Transfer details are on their way to ') + ($('bEmail').value || 'your inbox') + '. Check-in instructions follow two days before you arrive.';
+    S.sel = { in: null, out: null };
+    showStep(3); renderCal();
+  });
+  $('againBtn').addEventListener('click', function () { showStep(1); });
+
+  /* ---------- Option A: request form ---------- */
+  $('aIn').value = key(add(TODAY, 14)); $('aOut').value = key(add(TODAY, 16)); $('aIn').min = key(TODAY); $('aOut').min = key(add(TODAY, 1));
+  $('aForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var a = new Date($('aIn').value + 'T12:00'), b = new Date($('aOut').value + 'T12:00');
+    if (!(b > a)) { toast('Checkout needs to be after check-in.'); return; }
+    $('aDoneText').textContent = 'Thanks, ' + ($('aName').value.split(' ')[0] || 'there') + '. Harminder has your request for ' + nice(a) + ' to ' + nice(b) + ' and will reply to ' + ($('aEmail').value || 'you') + ' to confirm, with e-Transfer details.';
+    $('aForm').parentElement.parentElement.hidden = true; $('aDone').hidden = false;
+  });
+  $('aAgain').addEventListener('click', function () { $('aDone').hidden = true; $('aForm').parentElement.parentElement.hidden = false; });
+
+  /* ---------- owner dashboard ---------- */
+  function renderDash() {
+    var first = S.oview;
+    $('oTitle').textContent = MONTHS[first.getMonth()] + ' ' + first.getFullYear();
+    var grid = monthGrid(first, function (d) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'day';
+      var bk = bookingOn(d), past = d < TODAY;
+      b.innerHTML = d.getDate() + (bk && key(d) === key(bk.start) ? '<small>' + (bk.src === 'owner' ? 'Blocked' : bk.name) + '</small>' : '');
+      if (bk) b.classList.add('k-' + bk.src); else b.classList.add('free');
+      if (past) b.disabled = true;
+      b.setAttribute('aria-label', nice(d) + (bk ? ', ' + (bk.src === 'owner' ? 'blocked by you' : bk.src + ' booking, ' + bk.name) : ', free'));
+      b.addEventListener('click', function () {
+        var cur = bookingOn(d);
+        if (!cur) { S.bookings.push({ id: 'O-' + (++S.seq), src: 'owner', name: 'Blocked', start: d, end: add(d, 1) }); toast(nice(d) + ' blocked. Guests can no longer book it.'); }
+        else if (cur.src === 'owner') {
+          // reopen just this night, splitting the block if needed
+          S.bookings = S.bookings.filter(function (x) { return x !== cur; });
+          if (key(cur.start) < key(d)) S.bookings.push({ id: 'O-' + (++S.seq), src: 'owner', name: cur.name, start: cur.start, end: d });
+          if (key(add(d, 1)) < key(cur.end)) S.bookings.push({ id: 'O-' + (++S.seq), src: 'owner', name: cur.name, start: add(d, 1), end: cur.end });
+          toast(nice(d) + ' is open again.');
+        } else { toast(cur.src === 'airbnb' ? 'That night is an Airbnb booking. Manage it in Airbnb.' : 'That night is booked by ' + cur.name + '.'); return; }
+        renderDash();
+      });
+      return b;
+    });
+    var host = $('oDays'); host.replaceWith(grid); grid.id = 'oDays';
+    $('oPrev').disabled = first <= new Date(TODAY.getFullYear(), TODAY.getMonth(), 1);
+
+    var up = S.bookings.filter(function (b) { return b.src !== 'owner' && b.end > TODAY; }).sort(function (a, b) { return a.start - b.start; });
+    $('bList').innerHTML = up.slice(0, 6).map(function (b) {
+      var n = nightsBetween(b.start, b.end);
+      return '<li><span class="src ' + b.src + '">' + b.src + '</span><span><b>' + b.name + '</b>' + (b.pending ? ' · awaiting e-Transfer' : '') + '<small>' + nice(b.start) + ' → ' + nice(b.end) + ' · ' + n + ' nights' + (b.guests ? ' · ' + b.guests + ' guests' : '') + '</small></span><span>' + (b.src === 'direct' ? money(b.total || quote(b.start, b.end).total) : '') + '</span></li>';
+    }).join('') || '<li><span></span><span>No upcoming bookings yet.</span><span></span></li>';
+
+    var horizon = add(TODAY, 30), nights = 0, rev = 0;
+    S.bookings.forEach(function (b) {
+      if (b.src === 'owner') return;
+      for (var d = new Date(b.start); d < b.end; d = add(d, 1)) if (d >= TODAY && d < horizon) nights++;
+      if (b.src === 'direct' && b.start >= TODAY && b.start < horizon) rev += b.total || quote(b.start, b.end).total;
+    });
+    $('sUp').textContent = up.length; $('sNights').textContent = nights; $('sRev').textContent = money(rev); $('sSaved').textContent = money(rev / 1.13 * 0.15);
+  }
+  $('oPrev').addEventListener('click', function () { S.oview = new Date(S.oview.getFullYear(), S.oview.getMonth() - 1, 1); renderDash(); });
+  $('oNext').addEventListener('click', function () { S.oview = new Date(S.oview.getFullYear(), S.oview.getMonth() + 1, 1); renderDash(); });
+
+  function syncRates() {
+    $('pWk').value = S.rates.wk; $('pWe').value = S.rates.we; $('pCl').value = S.rates.clean; $('pMin').value = S.rates.min;
+    var from = money(Math.min(S.rates.wk, S.rates.we));
+    $('fromRate').textContent = from; $('mRate').textContent = from;
+    $('aWk').textContent = money(S.rates.wk); $('aWe').textContent = money(S.rates.we); $('aCl').textContent = money(S.rates.clean);
+  }
+  [['pWk', 'wk'], ['pWe', 'we'], ['pCl', 'clean'], ['pMin', 'min']].forEach(function (p) {
+    $(p[0]).addEventListener('change', function () {
+      var v = parseInt($(p[0]).value, 10); if (isNaN(v) || v < 0) { syncRates(); return; }
+      S.rates[p[1]] = p[1] === 'min' ? Math.max(1, Math.min(7, v)) : v; syncRates(); renderSummary(); toast('Saved. Your site shows the new price now.');
+    });
+  });
+
+  syncRates(); setMode('B'); renderCal();
+  if (innerWidth < 480) $('dashBtn').textContent = 'Owner';
+})();
+</script>
+</body>
+</html>
