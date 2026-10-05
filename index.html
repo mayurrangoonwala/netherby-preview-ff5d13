@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Besley:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --linen: #EEF1E8;
@@ -27,8 +27,8 @@
     --clay: #B0502C;
     --clay-2: #933F21;
     --clay-tint: #F6E4DA;
-    --serif: 'Young Serif', Georgia, 'Times New Roman', serif;
-    --sans: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --serif: 'Besley', Georgia, 'Times New Roman', serif;
+    --sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --r: 14px;
     --bar: 46px;
   }
@@ -40,10 +40,13 @@
   a { color: var(--field-2); }
   button { font: inherit; cursor: pointer; }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
-  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -0.01em; margin: 0; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; letter-spacing: -0.012em; margin: 0; text-wrap: balance; }
+  h3 { font-weight: 600; }
+  ::selection { background: var(--sage); color: var(--ink); }
+  input, select, textarea { accent-color: var(--field); caret-color: var(--clay); }
+  a { text-underline-offset: 3px; }
   h2 { font-size: clamp(30px, 4.2vw, 44px); }
   h3 { font-size: 22px; }
-  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--field-2); margin: 0 0 12px; }
   .lede { font-size: 19px; color: var(--ink-2); max-width: 60ch; }
   section { padding: 88px 0; }
   .tbc { border-bottom: 1.5px dotted var(--clay); cursor: help; }
@@ -68,7 +71,7 @@
   .nav .wrap { display: flex; align-items: center; gap: 24px; height: 66px; }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
   .brand img { width: 34px; height: 34px; border-radius: 8px; }
-  .brand b { font-family: var(--serif); font-weight: 400; font-size: 21px; }
+  .brand b { font-family: var(--serif); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; }
   .nav nav { display: flex; gap: 22px; margin-left: auto; }
   .nav nav a { color: var(--ink-2); text-decoration: none; font-weight: 500; font-size: 15.5px; }
   .nav nav a:hover { color: var(--ink); }
@@ -88,8 +91,7 @@
   .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
   .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,22,17,.62) 0%, rgba(16,22,17,.25) 55%, rgba(16,22,17,0) 80%), linear-gradient(180deg, rgba(16,22,17,.1) 0%, rgba(16,22,17,.45) 42%, rgba(16,22,17,.88) 100%); }
   .hero .wrap { position: relative; z-index: 1; padding-top: 140px; padding-bottom: 56px; width: 100%; }
-  .hero .eyebrow { color: #E8D7C3; }
-  .hero h1 { font-size: clamp(42px, 7vw, 82px); max-width: 13ch; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
+  .hero h1 { font-size: clamp(42px, 7vw, 80px); line-height: 1.0; letter-spacing: -0.018em; max-width: 13ch; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
   .hero p.sub { font-size: clamp(17px, 2vw, 21px); max-width: 46ch; color: rgba(255,255,255,.9); margin: 18px 0 28px; }
   .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
   .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; font-size: 14.5px; }
@@ -102,7 +104,7 @@
   .house .stack img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--r); }
   .house .stack img:nth-child(2) { margin-top: 48px; }
   .host { display: flex; gap: 14px; align-items: center; margin-top: 26px; padding: 16px 18px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); max-width: 480px; }
-  .host .av { width: 46px; height: 46px; border-radius: 50%; background: var(--field); color: var(--linen); display: grid; place-items: center; font-family: var(--serif); font-size: 20px; flex: none; }
+  .host .av { width: 46px; height: 46px; border-radius: 50%; background: var(--field); color: var(--linen); display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 20px; flex: none; }
   .host p { margin: 0; font-size: 15px; color: var(--ink-2); }
   .host b { color: var(--ink); }
 
@@ -153,18 +155,17 @@
 
   /* ---------- direct band ---------- */
   .direct { background: var(--field); color: var(--linen); }
-  .direct .eyebrow { color: #C9D8BE; }
   .direct h2 { color: #fff; max-width: 18ch; }
   .direct .grid { display: grid; gap: 22px; margin-top: 34px; }
   @media (min-width: 760px) { .direct .grid { grid-template-columns: repeat(3, 1fr); } }
   .direct .grid div { border-top: 1px solid rgba(246,242,234,.25); padding-top: 16px; }
-  .direct .grid b { display: block; font-family: var(--serif); font-weight: 400; font-size: 21px; color: #fff; margin-bottom: 6px; }
+  .direct .grid b { display: block; font-family: var(--serif); font-weight: 600; font-size: 21px; color: #fff; margin-bottom: 6px; }
   .direct .grid p { margin: 0; color: #D7E0D2; font-size: 15.5px; }
 
   /* ---------- booking ---------- */
   .book-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; }
   .rate-from { font-size: 15px; color: var(--ink-2); }
-  .rate-from b { font-family: var(--serif); font-weight: 400; font-size: 30px; color: var(--ink); }
+  .rate-from b { font-family: var(--serif); font-weight: 700; font-size: 30px; color: var(--ink); }
   .panel { background: var(--paper); border: 1px solid #D5DACB; border-radius: 20px; margin-top: 28px; }
   .bookB { display: grid; }
   @media (min-width: 980px) { .bookB { grid-template-columns: 1fr 360px; } }
@@ -175,7 +176,7 @@
   .cal-hint { font-size: 14.5px; color: var(--ink-3); }
   .months { display: grid; gap: 28px; }
   @media (min-width: 700px) { .months { grid-template-columns: 1fr 1fr; } }
-  .month h4 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 6px 0 10px; text-align: center; }
+  .month h4 { font-family: var(--serif); font-weight: 600; font-size: 19px; margin: 6px 0 10px; text-align: center; }
   .dow, .days { display: grid; grid-template-columns: repeat(7, 1fr); }
   .dow span { text-align: center; font-size: 12px; font-weight: 600; color: var(--ink-3); padding: 6px 0; }
   .day { aspect-ratio: 1; border: 0; background: none; border-radius: 10px; font-size: 15px; font-weight: 500; color: var(--ink); position: relative; }
@@ -203,6 +204,7 @@
   .note { font-size: 13.5px; color: var(--ink-3); margin: 12px 0 0; }
   .demo { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--clay-2); background: var(--clay-tint); border-radius: 999px; padding: 3px 9px; }
   .step { padding: 28px; max-width: 640px; }
+  .stepno { margin: 0 0 4px; font-size: 14px; font-weight: 600; color: var(--field-2); }
   .radio { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
   .radio label { flex: 1 1 200px; border: 1.5px solid #CFC8B9; border-radius: 12px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; font-size: 15px; cursor: pointer; background: #fff; }
   .radio label:has(input:checked) { border-color: var(--field); background: var(--sage-2); }
@@ -239,7 +241,7 @@
   footer { background: #1A211C; color: #BFC8BE; padding: 56px 0 120px; font-size: 15px; }
   footer .wrap { display: grid; gap: 28px; }
   @media (min-width: 800px) { footer .wrap { grid-template-columns: 1.2fr 1fr 1fr; } }
-  footer b { color: #fff; font-family: var(--serif); font-weight: 400; font-size: 22px; display: block; margin-bottom: 8px; }
+  footer b { color: #fff; font-family: var(--serif); font-weight: 700; font-size: 22px; display: block; margin-bottom: 8px; }
   footer h3 { font-family: var(--sans); font-weight: 700; margin: 0 0 8px; color: #fff; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
   footer p { margin: 0 0 6px; }
   footer a { color: #DCE6D6; }
@@ -247,7 +249,7 @@
 
   /* ---------- sticky mobile bar ---------- */
   .mbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--paper); border-top: 1px solid var(--line); box-shadow: 0 -10px 30px -18px rgba(30,38,32,.4); }
-  .mbar span { font-size: 14.5px; color: var(--ink-2); } .mbar b { font-family: var(--serif); font-weight: 400; font-size: 21px; color: var(--ink); }
+  .mbar span { font-size: 14.5px; color: var(--ink-2); } .mbar b { font-family: var(--serif); font-weight: 700; font-size: 21px; color: var(--ink); }
   @media (max-width: 820px) { .mbar { display: flex; } }
   body.dash-open .mbar { display: none; }
 
@@ -263,11 +265,13 @@
   .sync { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--field-2); background: var(--sage-2); border: 1px solid var(--sage); border-radius: 999px; padding: 5px 12px; }
   .sync i { width: 8px; height: 8px; border-radius: 50%; background: #3F9B54; }
   .d-body { padding: 28px 0 80px; }
+  .dtitle { font-size: 30px; margin: 0 0 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .dtitle .demo { font-family: var(--sans); }
   .stats { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
   @media (min-width: 860px) { .stats { grid-template-columns: repeat(4, 1fr); } }
   .stat { background: #fff; border: 1px solid #DCE0D6; border-radius: var(--r); padding: 16px 18px; }
   .stat span { font-size: 13px; color: var(--ink-3); font-weight: 600; letter-spacing: .04em; }
-  .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: 30px; margin-top: 4px; }
+  .stat b { display: block; font-family: var(--serif); font-weight: 700; font-size: 30px; margin-top: 4px; }
   .d-grid { display: grid; gap: 18px; margin-top: 18px; }
   @media (min-width: 980px) { .d-grid { grid-template-columns: 1.35fr 1fr; } }
   .card { background: #fff; border: 1px solid #DCE0D6; border-radius: 16px; padding: 20px; }
@@ -335,7 +339,6 @@
     <section id="house">
       <div class="wrap house">
         <div>
-          <p class="eyebrow">The house</p>
           <h2>Your base for everything Niagara.</h2>
           <p class="lede">Set among open farmland, this two-bedroom country home is yours alone. Spend the day at the Falls, the wineries or the beaches, then come back to a garden view, a big sky and real quiet.</p>
           <p style="color:var(--ink-2)">Inside there's a king bedroom on the main floor, a twin room upstairs, and a full kitchen with a gas stove and double oven. The laundry room means you can pack light. Starlink high-speed internet makes a working week here easy, and stays of 28 nights or more are welcome.</p>
@@ -353,7 +356,6 @@
 
     <section id="photos" style="padding-top:0">
       <div class="wrap">
-        <p class="eyebrow">Photos</p>
         <h2>Take a look around.</h2>
         <div class="gallery" id="gallery"></div>
       </div>
@@ -361,7 +363,6 @@
 
     <section style="padding-top:0">
       <div class="wrap">
-        <p class="eyebrow">Where you'll sleep</p>
         <h2>Room for four.</h2>
         <div class="sleep">
           <article><img src="assets/img/bedroom-king.jpg" alt="Main floor bedroom with a king bed"><div><h3>Bedroom 1</h3><p>King bed, on the main floor next to the living room. Blackout curtains.</p></div></article>
@@ -373,7 +374,6 @@
 
     <section style="padding-top:0">
       <div class="wrap">
-        <p class="eyebrow">What's here</p>
         <h2>Everything you need, nothing you don't.</h2>
         <div class="amen">
           <div><h3>Sleep</h3><ul><li>King bed and two singles</li><li>Cotton linens</li><li>Extra pillows and blankets</li><li>Room-darkening shades</li></ul></div>
@@ -389,7 +389,6 @@
     <section id="around" style="padding-top:0">
       <div class="wrap around">
         <div>
-          <p class="eyebrow">Around you</p>
           <h2>Country quiet, with pizza up the road.</h2>
           <p class="lede">Netherby Variety is just up the road for essentials, snacks and an LCBO outlet. On the same corner, The Brick Oven Pizza Company bakes wood-fired pies the locals line up for on weekends.</p>
           <ul class="places">
@@ -413,7 +412,6 @@
 
     <section class="direct">
       <div class="wrap">
-        <p class="eyebrow">Why book direct</p>
         <h2>Same house. Better rate. Straight to the owner.</h2>
         <div class="grid">
           <div><b>The best price</b><p>No booking site takes a cut here, so the same dates cost less than anywhere else.</p></div>
@@ -427,7 +425,6 @@
       <div class="wrap">
         <div class="book-head">
           <div>
-            <p class="eyebrow">Book your stay</p>
             <h2 id="bookTitle">Pick your dates.</h2>
           </div>
           <p class="rate-from">From <b id="fromRate">$195</b> / night <span class="demo">Sample rates</span></p>
@@ -460,7 +457,7 @@
 
           <div class="panel" id="bStep2" hidden>
             <form class="step" id="bForm">
-              <p class="eyebrow" style="margin-bottom:6px">Step 2 of 2</p>
+              <p class="stepno">Step 2 of 2</p>
               <h3 style="font-size:26px">Your details</h3>
               <p class="dates" id="step2Dates" style="color:var(--ink-2)"></p>
               <div class="row2">
@@ -546,7 +543,6 @@
     <section id="faq" style="padding-top:0">
       <div class="wrap rf">
         <div>
-          <p class="eyebrow">House rules</p>
           <h2>Simple, and fair.</h2>
           <ul class="rules">
             <li><b>Up to 4 guests.</b> No parties or events.</li>
@@ -558,7 +554,6 @@
           </ul>
         </div>
         <div>
-          <p class="eyebrow">Questions</p>
           <h2>Good to know.</h2>
           <div style="margin-top:14px">
             <details><summary>How does check-in work?</summary><p>It's self check-in with a smart lock. Your door code arrives before your stay. Check-in is from <span class="tbc" title="To confirm with Harminder">4:00 pm</span> and checkout is by <span class="tbc" title="To confirm with Harminder">11:00 am</span>.</p></details>
@@ -601,7 +596,7 @@
     <span class="who">Signed in as Harminder</span>
   </div></div>
   <div class="d-body"><div class="wrap">
-    <p class="eyebrow">Owner dashboard <span class="demo" style="margin-left:6px">Sample data</span></p>
+    <h2 class="dtitle">Owner dashboard <span class="demo">Sample data</span></h2>
     <div class="stats">
       <div class="stat"><span>Upcoming stays</span><b id="sUp">0</b></div>
       <div class="stat"><span>Nights booked, next 30 days</span><b id="sNights">0</b></div>
